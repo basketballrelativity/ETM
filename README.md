@@ -9,4 +9,6 @@ This README file describes the data and the code used to develop the end-of-game
 
 ### ETM Development
 
-`simulate_season.R`
+`simulate_season.R` runs a possession through the win probability model from `NBA_WPM.R`. This code finds the optimal decision a team can make during a possession. For an offensive team, these decisions include whether to shoot a two-point or three-point field goal. For a defensive team, these decisions included whether to intentionally foul or not. ETM is the difference between the win probability of the optimal decision and the win probability of the actual decision a team makes. 
+
+In its current state, `simulate_season.R` is set to run through all qualified possessions from the 2015-2016 NBA season in `PlayByPlay3.csv`. A possession qualifies if it occurs in the last three minutes of a game that ended with a score differential of five points or fewer. Periods ending with a score differential of 0 are included.  
